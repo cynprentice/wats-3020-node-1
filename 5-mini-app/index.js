@@ -1,4 +1,4 @@
-// write an app that meets requirements:
+ // write an app that meets requirements:
 // * uses if/else
 // * uses at least one operator +, -, *, /, %
 // * reads an arg from the command line and provides usage if not present or wrong type
@@ -10,3 +10,14 @@
 // get an integer using getargs
 let getargs = require("../modules/getargs/index.js");
 let input = getargs.getIntegerArg();
+
+if (isNaN(input)) {
+
+    console.log(`Please run this program with a number that represents temperature in Fahrenheit. It will convert the number to Celsius`)
+  } else {
+    var celsius = ((input -32) *5/9).toFixed(0)
+    
+    var degrees = celsius == 1 ? `degree` : `degrees`
+  
+    console.log(`${input} Fahrenheit is ${celsius} ${degrees} Celsius `)
+  }

@@ -8,19 +8,23 @@ let input = getargs.getStringArg()
 
 /**** Do not modify anything above this line ****/
 
-// TODO make sure that the user entered a string
-if () {
-  //TODO use console.log to add a usage statement and let the user know that if a string contains a space it must be quoted
-} 
+// Make sure that the user entered a string
+if (!(typeof (input) === 'string')) {
+  // let the user know that if a string contains a space it must be quoted
+  console.log(`Please run this program with a string. If your string contains a space it must be quoted, like this "two  words"`)
+}
 
 // check to see if string contains hello
 // if it does report back the position in the string where it begins
 
 else {
-  // TODO write a logical expression to test if the input contains a "hello"
-  if () {
-    // TODO use console.log and a template literal at what position the hello was found
+  var lowerInput = input.toLowerCase();
+  if (lowerInput.includes("hello")) {
+    var helloPosition = lowerInput.indexOf("hello")
+    console.log(`hello is at position ` + helloPosition)
+
   } else {
-    // TODO use console.log to indicate that the hello was not found
+
+    console.log(`Input does not contain "hello" `);
   }
 }
